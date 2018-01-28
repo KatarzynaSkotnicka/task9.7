@@ -122,6 +122,7 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
     checkRoundWinner();
+    checkGameWinner();
 }
 
 
