@@ -122,12 +122,12 @@ function setGamePoints() {
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
     checkRoundWinner();
-    checkGameWinner();
+    delayedCheck();
 }
 
 
 //game ends
-function checkGameWinner() {
+function delayedCheck() {setTimeout (function checkGameWinner() {
     if (player.score == 10) {
         alert(player.name + ' wins.');
         gameState = 'ended';
@@ -138,5 +138,9 @@ function checkGameWinner() {
         gameState = 'ended';
         setGameElements();
     }
+})
 }
+
+
+
 
